@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置 - 四班班级圈 - ClassNet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.6.2/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/std.css') }}">
+    <style>
+        #footer-text {
+            flex-grow: 1;
+            text-align: right;
+            white-space: nowrap;
+            margin: 80px;
+            margin-left: 100px;
+        }
+
+        #footer-img {
+            display: flex;
+            align-items: center;
+            margin: 60px;
+        }
+
+        @media (max-width: 768px) {
+
+            /* 手机 */
+            #footer-img {
+                display: none;
+            }
+
+            #footer-text {
+                float: left;
+                text-align: center;
+            }
+
+            .nav_text {
+                font-size: 12px;
+            }
+        }
+
+        .no-shadow {
+            box-shadow: none;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/" id="head_logo_text">
+            <div>
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" id="logo_img" />
+            </div>
+            <div>
+                <div id="logo_text_h">
+                    &nbsp; 人大附通·北京学校 2023级四班 班级圈
+                </div>
+                <div id="logo_text_l">
+                    &nbsp;&nbsp; Class Net - Class 4, Enrolled in 2023
+                </div>
+            </div>
+        </a>
+        {% if session['id'] != -1 %}
+        <div id="header_buttons">
+            <a href="/discuss/new/" target="_blank">
+                <img src="{{ url_for('static', filename='img/new_ico.png') }}" alt="新建" class="header_button_img" />
+            </a>
+            <a href="/discuss/list/" target="_blank">
+                <img src="{{ url_for('static', filename='img/search_ico.png') }}" alt="搜索" class="header_button_img" />
+            </a>
+            <a href="/user/me/" target="_blank">
+                <img src="{{ url_for('static', filename='img/person_ico.png') }}" alt="个人" class="header_button_img" />
+            </a>
+            {% if session['admin'] %}
+            <a href="/setting/" target="_blank">
+                <img src="{{ url_for('static', filename='img/setting_ico.png') }}" alt="设置" class="header_button_img" />
+            </a>
+            {% endif %}
+        </div>
+        {% else %}
+        <p id="header_buttons">
+        <h3><a href="/login/">登录</a></h3>
+        </p>
+        {% endif %}
+    </header>
+    <nav id="navbar" class="nav nav-pills nav-justified">
+        <div class="nav-link">
+            <a class="nav_link" href="/information/" target="_blank">
+                <div class="nav_text">班级信息</div>
+            </a>
+        </div>
+        <div class="nav-link">
+            <a class="nav_link" href="/resource/list/">
+                <div class="nav_text">班级资源</div>
+            </a>
+        </div>
+        <div class="nav-link">
+            <a class="nav_link" href="/forum/" target="_blank">
+                <div class="nav_text">班级论坛</div>
+            </a>
+        </div>
+        <div class="nav-link">
+            <a class="nav_link" href="/activity/" target="_blank">
+                <div class="nav_text">班级活动</div>
+            </a>
+        </div>
+        <div class="nav-link">
+            <a class="nav_link" href="/album/" target="_blank">
+                <div class="nav_text">班级相册</div>
+            </a>
+        </div>
+        <div class="nav-link">
+            <a class="nav_link" href="/about/" target="_blank">
+                <div class="nav_text">帮助中心</div>
+            </a>
+        </div>
+    </nav>
+    <section class="main-content" style="padding: 20px;">
+        <div class="main-content no-shadow">
+            <h1>审核列表</h1>
+            <p>您有未审核的文章！请您及时进行审核：</p>
+			{% for i in temp_list[1::] %}
+            ID: <a href="/discuss/{{ i }}/tmp/">{{i}}</a><br>
+            {% endfor %}
+			<p>没有找到更多未审核的帖子...</p>
+        </div>
+		<div class="main-content no-shadow">
+            <h1>班级相册上传区</h1>
+            <a href = "./pic_upload/">进入！</a>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>用户注册区</h1>
+            <a href = "/user/new/">进入！</a>
+        </div>
+        <hr>
+        <h2>Tips:此面板用于调整网站中的某些参数。请审核员们不要操作！此面板仅技术开发人员可调控！</h2>
+        <div class="main-content no-shadow">
+            <h1>通用控制面板</h1>
+            <form action="/setting/handle1/" method="post">
+                请输入文档名:
+                <input type="text" name="docname">
+                <div class="main-content no-shadow">
+                    {{ content | safe }}
+                </div>
+                <input type="submit" value="读取">
+            </form>
+            <form action="/setting/handle2/" method="post">
+                请输入文档名:
+                <input type="text" name="docname">
+                <textarea name="txt"></textarea>
+                <input type="submit" value="写入">
+            </form>
+        </div>
+		<div class="main-content no-shadow">
+            <h1>资源控制面板</h1>
+            <form action="/setting/handle_res_1/" method="post">
+                请输入讨论id:
+                <input type="text" name="did">
+				<input type="text" name="vk" value = "NO">
+                <input type="submit" value="复制">
+            </form>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>搜索树创建器</h1>
+            <form action="/setting/handle_tree/" method="post">
+                点击创建搜索树:
+                <input type="submit" value="生成搜索树...">
+            </form>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>作业调整面板</h1>
+            <p>本面板用于调整作业链接</p>
+            <form action="/setting/handle_index_1/" method="post">
+                <input type="submit" value="读取参数内容">
+                <div class="main-content no-shadow">
+                    {{ content_index | safe }}
+                </div>
+            </form>
+            <form action="/setting/handle_index_2/" method="post">
+                <textarea name="txt"></textarea>
+                <input type="submit" value="写入参数内容">
+            </form>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>主页调整面板</h1>
+            <p>本面板用于调整主页的新闻</p>
+            <form action="/setting/handle_index_3/" method="post">
+                <input type="submit" value="读取参数内容">
+                <div class="main-content no-shadow">
+                    {{ content_main | safe }}
+                </div>
+            </form>
+            <form action="/setting/handle_index_4/" method="post">
+                <textarea name="txt"></textarea>
+                <input type="submit" value="写入参数内容">
+            </form>
+        </div>
+        <div class="main-content">
+            <h1>修改密码控制面板</h1>
+            {% for i in fg %}
+            <div class="main-content no-shadow">
+                用户 {{ i['id'] }} (姓名：{{ i['rname'] }} 教育ID: {{ i['eduid'] }}) 请求将密码修改为 "{{ i['pwd'] }}"
+{#                <a href="/user/{{ d }}/fix"><button>审核通过</button></a>#}
+                <form method="POST" action="./handle_fgpwd/">
+                    <input type="hidden" name="pwd" value="{{ i['pwd'] }}">
+                    <input type="hidden" name="id" value="{{ i['id'] }}">
+                    <button>审核通过</button>
+                </form>
+            </div>
+            {% endfor %}
+			没有找到更多修改密码的申请了...
+        </div>
+        <div class="main-content no-shadow">
+            <h1>置顶活动列表控制面板</h1>
+            <h2>注：本部分尚有bug，故本面板不能使用。如果想添加置顶活动联系管理员添加。</h2>
+            <p>此面板用于设置置顶班级活动内的内容</p>
+            <form action="/setting/handle_activity_list/" method="post">
+                输入置顶活动次序号（1：体育；2：辩论；3：读书）: <input type="text" name="act_id" placeholder="请输入活动名称..." disabled><br>
+                添加活动：<input type="text" name="activity_name" placeholder="请输入活动名称..." disabled><br>
+                设置所对应的论坛id：<input type="text" name="discuss_id" disabled><br>
+                <input type="submit" value="添加" disabled>
+                <input type="reset" value="重设" disabled>
+            </form>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>活动列表控制面板</h1>
+            <p>此面板用于设置班级活动内的内容</p>
+            <form action="/setting/handle_activity/" method="post">
+                添加活动：<input type="text" name="activity_name" placeholder="请输入活动名称..."><br>
+                设置所对应的论坛id：<input type="text" name="discuss_id"><br>
+                <input type="submit" value="添加">
+                <input type="reset" value="重设">
+            </form>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>学科知识花园链接设置面板</h1>
+            <h2>注：本部分尚有bug，故本面板不能使用。如果想添加学科知识内容的请联系管理员添加。</h2>
+            <p>此面板用于设置班级活动-学科知识花园内的链接</p>
+            <form action="/setting/handle_learn/" method="post">
+                选择科目：
+                <input type="radio" name="subject" value="0" disabled>语文
+                <input type="radio" name="subject" value="1" disabled>数学
+                <input type="radio" name="subject" value="2" disabled>英语
+                <input type="radio" name="subject" value="3" disabled>道德与法治
+                <input type="radio" name="subject" value="4" disabled>地理
+                <input type="radio" name="subject" value="5" disabled>历史
+                <input type="radio" name="subject" value="6" disabled>生物
+                <input type="radio" name="subject" value="7" disabled>物理
+                <input type="radio" name="subject" value="8" disabled>化学
+                <input type="radio" name="subject" value="9" disabled>艺术
+                <br>
+                设置刊次：<input type="text" name="year" disabled>年 第<input type="text" name="idx" disabled>期<br>
+                设置所对应的论坛id：<input type="text" name="discuss_id" disabled><br>
+                <input type="submit" value="添加" disabled>
+                <input type="reset" value="重设" disabled>
+            </form>
+        </div>
+        <div class="main-content no-shadow">
+            <h1>光荣榜列表控制面板</h1>
+            <p>此面板用于设置光荣榜的内容</p>
+            <form action="/setting/handle_redt_1/" method="post">
+                <input type="submit" value="读取">
+                <div class="main-content no-shadow">
+                    {{ content_redt | safe }}
+                </div>
+            </form>
+            <form action="/setting/handle_redt_2/" method="post">
+                <textarea name="txt"></textarea>
+                <input type="submit" value="写入">
+            </form>
+        </div>
+{#        <div class="main-content no-shadow">#}
+{#            <h1>不到万不得已不要点进去！</h1>#}
+{#            <p>不到万不得已不要点进去！不到万不得已不要点进去！不到万不得已不要点进去！</p>#}
+{#            <p>审核员勿动！审核员勿动！审核员勿动！审核员勿动！审核员勿动！审核员勿动！</p>#}
+{#            <a href="/debug/">Code Edit Page - DO NOT CLICK THIS LINK</a>#}
+{#        </div>#}
+    </section>
+	<footer>
+		<div style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="footer_data" id="footer-img">
+				<img src="{{ url_for('static', filename='img/footer.png') }}" style="width: 53%;">
+				<img src="{{ url_for('static', filename='img/qr_code.png') }}" style="width: 20%; height: auto;">
+			</div>
+			<div class="footer_data" id="footer-text">
+				<span>
+                <a href="/about/course/" style="color: white; text-decoration: none;">使用教程</a>|
+                <a href="/about/manage/" style="color: white; text-decoration: none;">管理事项</a>|
+                <a href="/about/ula/" style="color: white; text-decoration: none;">用户协议</a>|
+                <a href="/about/feedback/" style="color: white; text-decoration: none;">联系我们</a>
+				</span>
+				<br>
+				Developed by the Class Net Dev Team
+				<br>
+				2024-2027，© 班级圈
+				<br>
+				<a href="http://beian.miit.gov.cn/" style="color:white; text-decoration: none;">
+				京ICP备2024080740号
+				</a>
+                <br>
+                All rights reserved.
+			</div>
+		</div>
+	</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OG1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="{{ url_for('static', filename='bootstrap-4.6.2/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/refresh_color.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/checker.js') }}"></script>
+</body>
+
+</html>

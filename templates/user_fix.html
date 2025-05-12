@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改用户信息 - 四班班级圈 - ClassNet</title>
+    <link rel="stylesheet" href="../../../static/bootstrap-4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/std.css">
+    <style>
+        #footer-text {
+            flex-grow: 1;
+            text-align: right;
+            white-space: nowrap;
+            margin: 80px;
+            margin-left: 100px;
+        }
+
+        #footer-img {
+            display: flex;
+            align-items: center;
+            margin: 60px;
+        }
+
+        @media (max-width: 768px) {
+            #footer-img {
+                display: none;
+            }
+
+            #footer-text {
+                float: left;
+                text-align: center;
+            }
+
+            .nav_text {
+                font-size: 12px;
+            }
+        }
+        .main-content {
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.6);
+            margin: 20px;
+            margin-left: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="/" id="head_logo_text">
+        <div>
+            <img src="../../../static/img/logo.png" alt="logo" id="logo_img"/>
+        </div>
+        <div>
+            <div id="logo_text_h">
+                &nbsp; 人大附通·北京学校 2023级四班 班级圈
+            </div>
+            <div id="logo_text_l">
+                &nbsp;&nbsp; Class Net - Class 4, Enrolled in 2023
+            </div>
+        </div>
+    </a>
+    {% if session['id'] != -1 %}
+    <div id="header_buttons">
+        <a href="/discuss/new/" target="_blank">
+            <img src="../../../static/img/new_ico.png" alt="新建" class="header_button_img"/>
+        </a>
+        <a href="/discuss/list/" target="_blank">
+            <img src="../../../static/img/search_ico.png" alt="搜索" class="header_button_img"/>
+        </a>
+        <a href="/user/me/" target="_blank">
+            <img src="../../../static/img/person_ico.png" alt="个人" class="header_button_img"/>
+        </a>
+        {% if session['admin'] %}
+        <a href="/setting/" target="_blank">
+            <img src="../../../static/img/setting_ico.png" alt="设置" class="header_button_img"/>
+        </a>
+        {% endif %}
+    </div>
+    {% else %}
+    <p id="header_buttons"><h3><a href="/login/">登录</a></h3></p>
+    {% endif %}
+</header>
+<nav id="navbar" class="nav nav-pills nav-justified">
+    <div class="nav-link">
+        <a class="nav_link" href="/information/" target="_blank">
+            <div class="nav_text">班级信息</div>
+        </a>
+    </div>
+    <div class="nav-link">
+        <a class="nav_link" href="/resource/list/">
+            <div class="nav_text">班级资源</div>
+        </a>
+    </div>
+    <div class="nav-link">
+        <a class="nav_link" href="/forum/" target="_blank">
+            <div class="nav_text">班级论坛</div>
+        </a>
+    </div>
+    <div class="nav-link">
+        <a class="nav_link" href="/activity/" target="_blank">
+            <div class="nav_text">班级活动</div>
+        </a>
+    </div>
+    <div class="nav-link">
+        <a class="nav_link" href="/album/" target="_blank">
+            <div class="nav_text">班级相册</div>
+        </a>
+    </div>
+    <div class="nav-link">
+        <a class="nav_link" href="/about/" target="_blank">
+            <div class="nav_text">帮助中心</div>
+        </a>
+    </div>
+</nav>
+<section>
+    <div style="margin-left: 2%; margin-right: 2%;">
+        <form method="POST" action="./handle/" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col main-content">
+                    <h2 for="username">基本信息修改：</h2><br>
+                    <label for="username">昵称：</label>
+                    <input type="text" id="username" name="username" value="{{ user.username }}"><br>
+                    <label for="rname">真实姓名：</label>
+                    <input type="text" id="rname" name="rname" value="{{ user.name }}"><br>
+                    <label for="sign">个性签名：</label>
+                    <input type="text" id="sign" name="sign" value="{{ user.desc }}"><br>
+                    <label for="avatar">头像：</label>
+                    <input type="file" id="avatar" name="avatar"><br>
+                </div>
+                <div class="col main-content">
+                    <h2 for="pwd">密码修改：</h2><br>
+                    输入旧密码：<input type="password" id="old_pwd" name="old_pwd" placeholder="留空表示无需更改" value = ""><br>
+                    输入新密码：<input type="password" id="new_pwd" name="new_pwd"><br>
+                </div>
+            </div>
+            <button class="btn bg-light border-blue" style="position: relative; left: 45%; width: 10%;">保 存</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="footer_data" id="footer-img">
+				<img src="{{ url_for('static', filename='img/footer.png') }}" style="width: 53%;">
+				<img src="{{ url_for('static', filename='img/qr_code.png') }}" style="width: 20%; height: auto;">
+			</div>
+			<div class="footer_data" id="footer-text">
+				<span>
+                <a href="/about/course/" style="color: white; text-decoration: none;">使用教程</a>|
+                <a href="/about/manage/" style="color: white; text-decoration: none;">管理事项</a>|
+                <a href="/about/ula/" style="color: white; text-decoration: none;">用户协议</a>|
+                <a href="/about/feedback/" style="color: white; text-decoration: none;">联系我们</a>
+				</span>
+				<br>
+				Developed by the Class Net Dev Team
+				<br>
+				2024-2027，© 班级圈
+				<br>
+				<a href="http://beian.miit.gov.cn/" style="color:white; text-decoration: none;">
+				京ICP备2024080740号
+				</a>
+                <br>
+                All rights reserved.
+			</div>
+		</div>
+</footer>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="../../../bootstrap-4.6.2/js/bootstrap.min.js"></script>
+<script src="../../../static/js/refresh_color.js"></script>
+<script src="../../../static/js/refresh_word.js"></script>
+<script src="../../../static/js/checker.js"></script>
+</body>
+</html>
