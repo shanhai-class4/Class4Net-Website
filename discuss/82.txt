@@ -1,6 +1,0 @@
-\##填写选择题赢大奖\@@
-
-<form target = "_self" action="/discuss/82/form_handle/1/" method="GET">
-				<input type="text" placeholder="抽奖号" name = "number" value="">
-				<input type="submit" value="抽奖">
-			</form>
