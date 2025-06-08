@@ -120,7 +120,7 @@ def get_user_discuss(uid, cc = True):
     ls2 = []
 
     for i in ls:
-        if not i[8] and '评论回复' not in i[3] and '私信' not in i[3]:  # and i[0] != now:
+        if not i[8] and '评论回复' not in i[3] and '私信' not in i[3] and '团队讨论' not in i[3] and '隐藏' not in i[3]:  # and i[0] != now:
             ls2.append(i)
     # for i in c[1].fetchall():
     #     #if i[4] == pub_id:
@@ -150,7 +150,7 @@ def get_user_discuss2(uid):
     ls2 = []
    
     for i in ls:
-        if i[8] and '评论回复' not in i[3] and '私信' not in i[3]:  # and i[0] != now:
+        if i[8] and '评论回复' not in i[3] and '私信' not in i[3] and '团队讨论' not in i[3] and '隐藏' not in i[3]:  # and i[0] != now:
             ls2.append(i)
     # for i in c[1].fetchall():
     #     #if i[4] == pub_id:
@@ -379,7 +379,7 @@ class Discuss:
         ls2 = []
 
         for i in ls:
-            if not i[8] and i[0] != now and '评论回复' not in i[3] and '私信' not in i[3]:
+            if not i[8] and i[0] != now and '评论回复' not in i[3] and '私信' not in i[3] and '团队讨论' not in i[3] and '隐藏' not in i[3]:
                 ls2.append(i)
         # for i in c[1].fetchall():
         #     #if i[4] == pub_id:
