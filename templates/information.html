@@ -1,345 +1,512 @@
 <!-- /information -->
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>班级信息 - 四班班级圈 - ClassNet</title>
+		<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+		<link rel="stylesheet" href="../static/bootstrap-4.6.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/css/std.css">
+		<style>
+			/* 全局样式 */
+			        body {
+			            font-family: Frutiger, sans-serif;
+			            /*background-color: #f5f5f5;*/
+			            /*padding: 20px;*/
+			        }
+			/*linear-gradient(99deg, rgb(125, 223, 215), rgb(172, 192, 232))
+			        */
+					/* 标题样式 */
+			        #class-duty-title {
+			            text-align: left;
+			            color: #111;
+			            font-size: 28px;
+			            margin-bottom: 20px;
+			            font-weight: bold;
+			        }
+			
+			        /* 表格公共样式 */
+			        .class-duty-table {
+			            border-collapse: collapse;
+			            width: 100%;
+			            margin-bottom: 20px;
+			            background-color: #fff;
+			            border-radius: 8px;
+			            overflow: hidden;
+			            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			        }
+			
+			        .class-duty-table th,
+			        .class-duty-table td {
+			            border: 1px solid #ddd;
+			            padding: 12px;
+			            text-align: center;
+			        }
+			
+			        /* 表头样式 */
+			        .class-duty-table th {
+			            background-color: rgb(172, 192, 232);
+			            color: #000;
+			            font-weight: bold;
+			        }
+			
+			        /* 表格正文行交替颜色 */
+			        .class-duty-table tr:nth-child(even) {
+			            background-color: #f9f9f9;
+			        }
+			
+			        /* 表格悬停效果 */
+			        .class-duty-table tr:hover {
+			            background-color: #f1f1f1;
+			        }
+			
+			        /* 备注样式 */
+			        #class-duty-note {
+			            font-size: 14px;
+			            line-height: 1.6;
+			            color: #555;
+			            margin-top: 20px;
+			            padding: 15px;
+			            background-color: #fff;
+			            border-radius: 8px;
+			            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			        }
+			
+			        /* 子标题样式 */
+			        h2 {
+			            color: #000;
+			            font-size: 22px;
+			            margin-bottom: 15px;
+			            font-weight: bold;
+			            padding-left: 10px;
+			            border-left: 4px solid rgb(169, 178, 209);
+			        }
+			#footer-text {
+				flex-grow: 1;
+				text-align: right;
+				white-space: nowrap;
+				margin: 80px;
+				margin-left: 100px;
+			}
 
-    <title>班级信息 - 四班班级圈 - ClassNet</title>
+			#footer-img {
+				display: flex;
+				align-items: center;
+				margin: 60px;
+			}
 
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="../static/bootstrap-4.6.2/css/bootstrap.min.css">
+			@media (max-width: 768px) {
 
-    <link rel="stylesheet" href="../static/css/std.css">
-    <style>
-        #footer-text {
-            flex-grow: 1;
-            text-align: right;
-            white-space: nowrap;
-            margin: 80px;
-            margin-left: 100px;
-        }
+				/* 手机 */
+				#footer-img {
+					display: none;
+				}
 
-        #footer-img {
-            display: flex;
-            align-items: center;
-            margin: 60px;
-        }
+				#footer-text {
+					float: left;
+					text-align: center;
+				}
 
-        @media (max-width: 768px) {
+				.nav_text {
+					font-size: 12px;
+				}
+			}
 
-            /* 手机 */
-            #footer-img {
-                display: none;
-            }
+			section {
+				display: flex;
+			}
 
-            #footer-text {
-                float: left;
-                text-align: center;
-            }
+			.main-content {
+				border-radius: 10px;
+				background: rgba(255, 255, 255, 0.6);
+				margin: 20px;
+				/*margin-left: 10px;*/
+				padding: 20px;
+				border-radius: 10px;
+				/* 根据需要调整 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				width: 80%;
+			}
 
-            .nav_text {
-                font-size: 12px;
-            }
-        }
+			.sidebar {
+				background: rgba(255, 255, 255, 0.5);
+				padding: 20px;
+				margin: 20px;
+				border-radius: 10px;
+				width: 20%;
+				/* 根据需要调整 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
 
-        section {
-            display: flex;
-        }
+			.sidebar h2 {
+				margin-top: 5px;
+				font-size: 40px;
+				color: #000;
+				margin-bottom: 10px;
+				text-align: center;
+			}
 
-        .main-content {
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.6);
-            margin: 20px;
-            margin-left: 10px;
-            padding: 20px;
-            border-radius: 0px;
-            /* 根据需要调整 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
-        }
+			.sidebar a {
+				display: block;
+				color: #000;
+				text-decoration: none;
+				margin-bottom: 5px;
+				font-size: 25px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
 
-        .sidebar {
-            background: rgba(255, 255, 255, 0.5);
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            width: 20%;
-            /* 根据需要调整 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+			.sidebar a:hover {
+				color: red;
+				font-weight: 700;
+			}
 
-        .sidebar h2 {
-            margin-top: 5px;
-            font-size: 40px;
-            color: #000;
-            margin-bottom: 10px;
-            text-align: center;
-        }
+			#class-duty {
+				font-size: 20px;
+			}
 
-        .sidebar a {
-            display: block;
-            color: #000;
-            text-decoration: none;
-            margin-bottom: 5px;
-            font-size: 25px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+			#class-duty-table {
+				width: 1000px;
+			}
 
-        .sidebar a:hover {
-            color: red;
-            font-weight: 700;
-        }
+			#class-member-table {
+				width: 100%;
+			}
 
-        #class-duty {
-            font-size: 20px;
-        }
+			#class-manage td {
+				height: 991px;
+				width: 559.02pt;
+				border: black solid 1px;
+				padding: 10px;
+			}
 
-        #class-duty-table {
-            width: 1000px;
-        }
+			#schedule {
+				font-size: 20px;
+				width: 100%;
+			}
 
-        #class-member-table {
-            width: 100%;
-        }
+			@media (max-width: 768px) {
 
-        #class-manage td {
-            height: 991px;
-            width: 559.02pt;
-            border: black solid 1px;
-            padding: 10px;
-        }
+				/* 手机 */
+				section {
+					display: list-item;
+				}
 
-        #schedule {
-            font-size: 20px;
-            width: 100%;
-        }
+				#class-duty {
+					font-size: 12px;
+					padding: 1px;
+				}
 
-        @media (max-width: 768px) {
+				#class-duty-table {
+					width: 100px;
+				}
 
-            /* 手机 */
-            section {
-                display: list-item;
-            }
+				#class-manage td {
+					width: 100%;
+					font-size: 12px;
+					border: black solid 1px;
+					padding: 5px;
+				}
 
-            #class-duty {
-                font-size: 12px;
-                padding: 1px;
-            }
+				.nav_text {
+					position: relative;
+					left: 0px;
+					display: flex;
+					font-size: 12px;
+				}
 
-            #class-duty-table {
-                width: 100px;
-            }
+				.sidebar {
+					width: 90%;
+					margin: 20px;
+				}
 
-            #class-manage td {
-                width: 100%;
-                font-size: 12px;
-                border: black solid 1px;
-                padding: 5px;
-            }
+				.main-content {
+					width: 90%;
+					margin: 20px;
+				}
 
-            .nav_text {
-                position: relative;
-                left: 0px;
-                display: flex;
-                font-size: 12px;
-            }
+				#schedule {
+					font-size: 12px;
+					width: 100%;
+				}
 
-            .sidebar {
-                width: 90%;
-                margin: 20px;
-            }
-
-            .main-content {
-                width: 90%;
-                margin: 20px;
-
-            }
-
-            #schedule {
-                font-size: 12px;
-                width: 100%;
-            }
-
-            #class-member-table {
-                width: 100%;
-            }
-        }
-    </style>
-
-</head>
-
-<body>
-<!-- 顶部信息 -->
-<header>
-    <a href="/" id="head_logo_text">
-        <div>
-            <img src="../static/img/logo.png" alt="logo" id="logo_img"/>
-        </div>
-        <div>
-            <div id="logo_text_h">
-                &nbsp; 人大附通·北京学校 2023级四班 班级圈
-            </div>
-            <div id="logo_text_l">
-                &nbsp;&nbsp; Class Net - Class 4, Enrolled in 2023
-            </div>
-        </div>
-    </a>
-    {% if session['id'] != -1 %}
-        <div id="header_buttons">
-            <a href="/discuss/new/" target="_blank">
-                <img src="../static/img/new_ico.png" alt="新建" class="header_button_img"/>
-            </a>
-            <a href="/discuss/list/" target="_blank">
-                <img src="../static/img/search_ico.png" alt="搜索" class="header_button_img"/>
-            </a>
-            <a href="/user/me/" target="_blank">
-                <img src="../static/img/person_ico.png" alt="个人" class="header_button_img"/>
-            </a>
-            {% if session['admin'] %}
-                <a href="/setting/" target="_blank">
-                    <img src="../static/img/setting_ico.png" alt="设置" class="header_button_img"/>
-                </a>
-            {% endif %}
-        </div>
-    {% else %}
-        <p id="header_buttons">
-        <h3><a href="/login/">登录</a></h3>
-        </p>
-    {% endif %}
-</header>
-<nav id="navbar" class="nav nav-pills nav-justified">
-    <div class="nav-link">
-        <a class="nav_link" href="/information/" target="_blank">
-            <div class="nav_text">班级信息</div>
-        </a>
-    </div>
-    <div class="nav-link">
-        <a class="nav_link" href="/resource/list/">
-            <div class="nav_text">班级资源</div>
-        </a>
-    </div>
-    <div class="nav-link">
-        <a class="nav_link" href="/forum/" target="_blank">
-            <div class="nav_text">班级论坛</div>
-        </a>
-    </div>
-    <div class="nav-link">
-        <a class="nav_link" href="/activity/" target="_blank">
-            <div class="nav_text">班级活动</div>
-        </a>
-    </div>
-    <div class="nav-link">
-        <a class="nav_link" href="/album/" target="_blank">
-            <div class="nav_text">班级相册</div>
-        </a>
-    </div>
-    <div class="nav-link">
-        <a class="nav_link" href="/about/" target="_blank">
-            <div class="nav_text">帮助中心</div>
-        </a>
-    </div>
-</nav>
-<section>
-    <div class="sidebar">
-        <h2>菜单</h2>
-        <a href="#" class="item" id="item-rule">班级守则</a> <!-- style="background-color: mediumturquoise;"-->
-        <a href="#" class="item" id="item-duty">卫生制度</a>
-        <a href="#" class="item" id="item-member">班级成员列表</a>
-        <a href="#" class="item" id="item-manage">班干部职责</a>
-        <a href="#" class="item" id="item-schedule">课程表</a>
-    </div>
-
-    <div class="main-content" id="class-rule" style="display:block;">
-        {#				<iframe src="../info/information/rule.html"></iframe>#}
-        <div style="padding: 10px 16px 329px;">
-            <div class="cl-preview-section" style="text-align: center;">
-                <h1>初二4班 班级守则</h1>
-            </div>
-            <div class="cl-preview-section">
-                <h2>一、品行</h2>
-            </div>
-            <div class="cl-preview-section">
-                <ol>
-                    <li><b>尊重老师：</b>感恩、理解、尊重老师，不诋毁、嘲笑老师；不可随意纠正老师的读音，师生互动分清场合。</li>
-                    <li><b>关心同学：</b>包容同学的小错误，不随意嘲笑、起哄；留给同学思考时间，即使提前学过也不随意抢答；珍惜友谊，在朋友需要时伸出援手，有付出才有收获。
-                    </li>
-                    <li><b>自我修复：</b>内心强大，不过分在意他人的眼光，不给自己过多压力，勇于提出不同意见。</li>
-                    <li><b>语言规范：</b>养成良好语言习惯，不讲不文明用语；注意有时要言辞委婉，不能过激。</li>
-                </ol>
-            </div>
-            <div class="cl-preview-section">
-                <h2>二、学习</h2>
-            </div>
-            <div class="cl-preview-section">
-                <ol>
-                    <li><b>积极进取：</b>有颗奋进的心，努力学习，保持强烈的学习欲望、学习兴趣、学习劲头。</li>
-                    <li><b>善于合作：</b>分享自己的学习经验与学习感受，不吝啬，互相帮助、启发。</li>
-                    <li><b>重视锻炼：</b>爱锻炼、勤锻炼，每天自觉练习体育测试项目；保持对体育课的兴趣，认真对待课上的练习，体育成绩达到
-                        85
-                        及以上；增强自我保护意识，有伤病一定休息，但不能故意偷懒。
-                    </li>
-                    <li><b>课堂要求：</b>听从老师安排，不随意发言；重视所有学科，摸索适当方法、树立远大目标，保持兴趣、不偏科；积极举手回答问题，营造良好的课堂氛围。
-                    </li>
-                    <li><b>作业要求：</b>不抄袭，力争在校完成；到校后及时上交作业，保证上交快速、有序。</li>
-                    <li><b>考试要求：</b>考出真实水平，不因马虎扣分；努力复习，不留遗憾，认真对待每一场考试。</li>
-                </ol>
-            </div>
-            <div class="cl-preview-section">
-                <h2>三、生活</h2>
-            </div>
-            <div class="cl-preview-section">
-                <ol>
-                    <li><b>个人管理：</b>上交手机、电话手表等可能影响学习的电子设备；不追跑打闹，尤其是在狭窄、有棱角的区域内；不随意坐到其他同学的座位上，不传播同学隐私，不叫同学不好的外号。
-                    </li>
-                    <li><b>公共设施：</b>不随意使用多媒体；不随意在黑板上写字、涂抹。</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-    <div class="main-content" id="class-duty" style="display:none;">
-        {#				<iframe src="../info/information/duty.html"></iframe>#}
-            <img src="../static/img/duty.png" style="width: 75%;"/>
-    </div>
-    <div class="main-content" id="class-member" style="display:none;">
-        <img src="../static/img/member.png" style="width: 75%;">
-    </div>
-    <div class="main-content" id="class-manage" style="display:none;">
-{#        <iframe src="../info/information/manage.html"></iframe>#}
-        <table cellspacing="0" style="background-color: white; " id="class-manage">
+				#class-member-table {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body> <!-- 顶部信息 -->
+		<header> <a href="/" id="head_logo_text">
+				<div> <img src="../static/img/logo.png" alt="logo" id="logo_img" /> </div>
+				<div>
+					<div id="logo_text_h"> &nbsp; 人大附通·北京学校 2023级四班 班级圈 </div>
+					<div id="logo_text_l"> &nbsp;&nbsp; Class Net - Class 4, Enrolled in 2023 </div>
+				</div>
+			</a> {% if session['id'] != -1 %} <div id="header_buttons"> <a href="/discuss/new/" target="_blank"> <img
+						src="../static/img/new_ico.png" alt="新建" class="header_button_img" /> </a> <a
+					href="/discuss/list/" target="_blank"> <img src="../static/img/search_ico.png" alt="搜索"
+						class="header_button_img" /> </a> <a href="/user/me/" target="_blank"> <img
+						src="../static/img/person_ico.png" alt="个人" class="header_button_img" /> </a>
+				{% if session['admin'] %} <a href="/setting/" target="_blank"> <img src="../static/img/setting_ico.png"
+						alt="设置" class="header_button_img" /> </a> {% endif %} </div> {% else %} <p id="header_buttons">
+			<h3><a href="/login/">登录</a></h3>
+			</p> {% endif %}
+		</header>
+		<nav id="navbar" class="nav nav-pills nav-justified">
+			<div class="nav-link"> <a class="nav_link" href="/information/" target="_blank">
+					<div class="nav_text">班级信息</div>
+				</a> </div>
+			<div class="nav-link"> <a class="nav_link" href="/resource/list/">
+					<div class="nav_text">班级资源</div>
+				</a> </div>
+			<div class="nav-link"> <a class="nav_link" href="/forum/" target="_blank">
+					<div class="nav_text">班级论坛</div>
+				</a> </div>
+			<div class="nav-link"> <a class="nav_link" href="/activity/" target="_blank">
+					<div class="nav_text">班级活动</div>
+				</a> </div>
+			<div class="nav-link"> <a class="nav_link" href="/album/" target="_blank">
+					<div class="nav_text">班级相册</div>
+				</a> </div>
+			<div class="nav-link"> <a class="nav_link" href="/about/" target="_blank">
+					<div class="nav_text">帮助中心</div>
+				</a> </div>
+		</nav>
+		<section>
+			<div class="sidebar">
+				<h2>菜单</h2> <a href="#" class="item" id="item-rule">班级守则</a>
+				<!-- style="background-color: mediumturquoise;"--> <a href="#" class="item" id="item-duty">卫生制度</a> <a
+					href="#" class="item" id="item-member">班级成员列表</a> <a href="#" class="item"
+					id="item-manage">班干部职责</a> <a href="#" class="item" id="item-schedule">课程表</a>
+			</div>
+			<div class="main-content" id="class-rule" style="display:block;">
+				<!-- <iframe src="../info/information/rule.html"></iframe>--> <div style="padding: 10px 16px 329px;">
+					<div class="cl-preview-section" style="text-align: center;">
+						<h1>初二4班 班级守则</h1>
+					</div>
+					<div class="cl-preview-section">
+						<h2>一、品行</h2>
+					</div>
+					<div class="cl-preview-section">
+						<ol>
+							<li><b>尊重老师：</b>感恩、理解、尊重老师，不诋毁、嘲笑老师；不可随意纠正老师的读音，师生互动分清场合。</li>
+							<li><b>关心同学：</b>包容同学的小错误，不随意嘲笑、起哄；留给同学思考时间，即使提前学过也不随意抢答；珍惜友谊，在朋友需要时伸出援手，有付出才有收获。 </li>
+							<li><b>自我修复：</b>内心强大，不过分在意他人的眼光，不给自己过多压力，勇于提出不同意见。</li>
+							<li><b>语言规范：</b>养成良好语言习惯，不讲不文明用语；注意有时要言辞委婉，不能过激。</li>
+						</ol>
+					</div>
+					<div class="cl-preview-section">
+						<h2>二、学习</h2>
+					</div>
+					<div class="cl-preview-section">
+						<ol>
+							<li><b>积极进取：</b>有颗奋进的心，努力学习，保持强烈的学习欲望、学习兴趣、学习劲头。</li>
+							<li><b>善于合作：</b>分享自己的学习经验与学习感受，不吝啬，互相帮助、启发。</li>
+							<li><b>重视锻炼：</b>爱锻炼、勤锻炼，每天自觉练习体育测试项目；保持对体育课的兴趣，认真对待课上的练习，体育成绩达到 85
+								及以上；增强自我保护意识，有伤病一定休息，但不能故意偷懒。 </li>
+							<li><b>课堂要求：</b>听从老师安排，不随意发言；重视所有学科，摸索适当方法、树立远大目标，保持兴趣、不偏科；积极举手回答问题，营造良好的课堂氛围。 </li>
+							<li><b>作业要求：</b>不抄袭，力争在校完成；到校后及时上交作业，保证上交快速、有序。</li>
+							<li><b>考试要求：</b>考出真实水平，不因马虎扣分；努力复习，不留遗憾，认真对待每一场考试。</li>
+						</ol>
+					</div>
+					<div class="cl-preview-section">
+						<h2>三、生活</h2>
+					</div>
+					<div class="cl-preview-section">
+						<ol>
+							<li><b>个人管理：</b>上交手机、电话手表等可能影响学习的电子设备；不追跑打闹，尤其是在狭窄、有棱角的区域内；不随意坐到其他同学的座位上，不传播同学隐私，不叫同学不好的外号。
+							</li>
+							<li><b>公共设施：</b>不随意使用多媒体；不随意在黑板上写字、涂抹。</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="main-content" id="class-duty" style="display:none;">
+				<h1 id="class-duty-title">2023级4班 初二下学期 值日表</h1>
+				
+				    <h2>课间擦黑板</h2>
+				    <table class="class-duty-table">
+				        <tr>
+				            <th>时间</th>
+				            <th>2.17 - 21</th>
+				            <th>2.24 - 28</th>
+				            <th>3.3 - 7</th>
+				            <th>3.10 - 14</th>
+				            <th>3.17 - 21</th>
+				            <th>3.24 - 28</th>
+				            <th>3.31 - 4.3</th>
+				        </tr>
+				        <tr>
+				            <td>值日生</td>
+				            <td>钱薇涵</td>
+				            <td>李畅</td>
+				            <td>达宸滋</td>
+				            <td>丁一宁</td>
+				            <td>沈树阳</td>
+				            <td>张天字</td>
+				            <td>郝翌墨</td>
+				        </tr>
+				        <tr>
+				            <th>时间</th>
+				            <th>4.7 - 11</th>
+				            <th>4.14 - 18</th>
+				            <th>4.21 - 25</th>
+				            <th>4.27 - 30</th>
+				            <th>5.6 - 9</th>
+				            <th>5.12 - 16</th>
+				            <th>5.19 - 23</th>
+				        </tr>
+				        <tr>
+				            <td>值日生</td>
+				            <td>曲昕迪</td>
+				            <td>袁立之</td>
+				            <td>李东泽</td>
+				            <td>雒贝西</td>
+				            <td>甘宇轩</td>
+				            <td>胡峻瑛</td>
+				            <td>吴彦然</td>
+				        </tr>
+				        <tr>
+				            <th>时间</th>
+				            <th>5.26 - 30</th>
+				            <th>6.3 - 6</th>
+				            <th>6.9 - 13</th>
+				            <th>6.16 - 20</th>
+				            <th>6.23 - 27</th>
+				            <th>6.30 - 7.4</th>
+				            <th>7.7 - 7.11</th>
+				        </tr>
+				        <tr>
+				            <td>值日生</td>
+				            <td>王岩杉</td>
+				            <td>钱薇涵</td>
+				            <td>李畅</td>
+				            <td>达宸滋</td>
+				            <td>丁一宁</td>
+				            <td>沈树阳</td>
+				            <td>张天字</td>
+				        </tr>
+				    </table>
+				
+				    <h2>放学后值日</h2>
+				    <table class="class-duty-table">
+				        <tr>
+				            <th>日期</th>
+				            <th>2.17 - 21</th>
+				            <th>2.24 - 28</th>
+				            <th>3.3 - 7</th>
+				            <th>3.10 - 14</th>
+				            <th>3.17 - 21</th>
+				            <th>3.24 - 28</th>
+				            <th>3.31 - 4.3</th>
+				        </tr>
+				        <tr>
+				            <th></th>
+				            <th>4.7 - 11</th>
+				            <th>4.14 - 18</th>
+				            <th>4.21 - 25</th>
+				            <th>4.27 - 30</th>
+				            <th>5.6 - 9</th>
+				            <th>5.12 - 16</th>
+				            <th>5.19 - 23</th>
+				        </tr>
+				        <tr>
+				            <th></th>
+				            <th>5.26 - 30</th>
+				            <th>6.3 - 6</th>
+				            <th>6.9 - 13</th>
+				            <th>6.16 - 20</th>
+				            <th>6.23 - 27</th>
+				            <th>6.30 - 7.4</th>
+				            <th>7.7 - 7.11</th>
+				        </tr>
+				        <tr>
+				            <td>负责人</td>
+				            <td>张竹青</td>
+				            <td>张茁原</td>
+				            <td>曹博充</td>
+				            <td>闫嘉桐</td>
+				            <td>翟培龙</td>
+				            <td>贠涵</td>
+				            <td>周玉姝</td>
+				        </tr>
+				        <tr>
+				            <td>组员</td>
+				            <td>孙毓彤</td>
+				            <td>王予清</td>
+				            <td>许可</td>
+				            <td>姜皓程</td>
+				            <td>华毅弘</td>
+				            <td>付敬卯</td>
+				            <td>尹怀杰</td>
+				        </tr>
+				        <tr>
+				            <td></td>
+				            <td>赵泽晓</td>
+				            <td>杨晨曦</td>
+				            <td>胡堇暄</td>
+				            <td>黄一寻</td>
+				            <td>陈思羽</td>
+				            <td>郭益昕</td>
+				            <td>张茂原</td>
+				        </tr>
+				        <tr>
+				            <td></td>
+				            <td>程钟灵</td>
+				            <td>李亦凡</td>
+				            <td>张惜媛</td>
+				            <td>戎佳怡</td>
+				            <td>王元基</td>
+				            <td>孔令煊</td>
+				            <td>张飞扬</td>
+				        </tr>
+				        <tr>
+				            <td></td>
+				            <td></td>
+				            <td></td>
+				            <td>高一凡</td>
+				            <td></td>
+				            <td></td>
+				            <td>董雨宸</td>
+				            <td>张毅弘</td>
+				        </tr>
+				    </table>
+				
+				    <p id="class-duty-note">注：其它问题，每周由对应值日生组负责：进出班级适时开窗通风和开关空调、灯、多媒体，捡起教室内外的明显垃圾，避免讲台堆积物品过多，诸如此类影响学习生活、班级风貌的问题。这学期，3.31，4.27，5.6，6.3除因调休值日4天，其余日期5天。擦黑板一次的下学期先排。</p>
+			</div>
+			<div class="main-content" id="class-member" style="display:none;"> <img src="../static/img/member.png"
+					style="width: 75%;"> </div>
+			<div class="main-content" id="class-manage" style="display:none;">
+				<!--<iframe src="../info/information/manage.html"></iframe>--> <table cellspacing="0"
+					style="background-color: white; " id="class-manage">
 					<tbody>
 						<tr>
 							<td colspan="3"
 								style="height:30.00pt; text-align:center; vertical-align:bottom; white-space:nowrap; width:559.85pt">
 								<span style="color:#000000">
 									<h3>初二4班 班干部职责</h3>
-								</span>
-							</td>
+								</span> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:22.50pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">职务</span></strong>
-							</td>
+								<strong><span style="color:#000000">职务</span></strong> </td>
 							<td
 								style="border-color:#000000; height:22.50pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">姓名</span></strong>
-							</td>
+								<strong><span style="color:#000000">姓名</span></strong> </td>
 							<td
 								style="border-color:#000000; height:22.50pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">职责</span></strong>
-							</td>
+								<strong><span style="color:#000000">职责</span></strong> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:84.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">班长</span></strong>
-							</td>
+								<strong><span style="color:#000000">班长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:84.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">贠涵</span></strong>
-							</td>
+								<strong><span style="color:#000000">贠涵</span></strong> </td>
 							<td
 								style="border-color:#000000; height:84.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -349,12 +516,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:84.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">副班长</span></strong>
-							</td>
+								<strong><span style="color:#000000">副班长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:84.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">李亦凡</span></strong>
-							</td>
+								<strong><span style="color:#000000">李亦凡</span></strong> </td>
 							<td
 								style="border-color:#000000; height:84.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -364,12 +529,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:98.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">学习委员</span></strong>
-							</td>
+								<strong><span style="color:#000000">学习委员</span></strong> </td>
 							<td
 								style="border-color:#000000; height:98.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">王岩杉</span></strong>
-							</td>
+								<strong><span style="color:#000000">王岩杉</span></strong> </td>
 							<td
 								style="border-color:#000000; height:98.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -379,12 +542,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">宣传委员</span></strong>
-							</td>
+								<strong><span style="color:#000000">宣传委员</span></strong> </td>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">张茁原</span></strong>
-							</td>
+								<strong><span style="color:#000000">张茁原</span></strong> </td>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -394,12 +555,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">纪律委员</span></strong>
-							</td>
+								<strong><span style="color:#000000">纪律委员</span></strong> </td>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">周玉姝</span></strong>
-							</td>
+								<strong><span style="color:#000000">周玉姝</span></strong> </td>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -409,12 +568,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">文艺委员</span></strong>
-							</td>
+								<strong><span style="color:#000000">文艺委员</span></strong> </td>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">孔令煊</span></strong>
-							</td>
+								<strong><span style="color:#000000">孔令煊</span></strong> </td>
 							<td
 								style="border-color:#000000; height:54.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<p><strong><span
@@ -426,12 +583,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:83.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">体育委员</span></strong>
-							</td>
+								<strong><span style="color:#000000">体育委员</span></strong> </td>
 							<td
 								style="border-color:#000000; height:83.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">张天字</span></strong>
-							</td>
+								<strong><span style="color:#000000">张天字</span></strong> </td>
 							<td
 								style="border-color:#000000; height:83.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -441,12 +596,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:83.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">卫生委员</span></strong>
-							</td>
+								<strong><span style="color:#000000">卫生委员</span></strong> </td>
 							<td
 								style="border-color:#000000; height:83.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">达宸滋</span></strong>
-							</td>
+								<strong><span style="color:#000000">达宸滋</span></strong> </td>
 							<td
 								style="border-color:#000000; height:83.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span style="color:#000000"><span
@@ -457,12 +610,10 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">语文课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">语文课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">张惜媛、闫嘉桐</span></strong>
-							</td>
+								<strong><span style="color:#000000">张惜媛、闫嘉桐</span></strong> </td>
 							<td rowspan="7"
 								style="border-color:#000000; height:23.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -472,70 +623,56 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">数学课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">数学课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">李东泽、张竹青</span></strong>
-							</td>
+								<strong><span style="color:#000000">李东泽、张竹青</span></strong> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">英语课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">英语课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">王岩杉、胡峻瑛</span></strong>
-							</td>
+								<strong><span style="color:#000000">王岩杉、胡峻瑛</span></strong> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">历史课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">历史课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">贠涵、黄一寻</span></strong>
-							</td>
+								<strong><span style="color:#000000">贠涵、黄一寻</span></strong> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">地理课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">地理课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">张茁原、董雨宸</span></strong>
-							</td>
+								<strong><span style="color:#000000">张茁原、董雨宸</span></strong> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">生物课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">生物课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">王元基、周玉姝</span></strong>
-							</td>
+								<strong><span style="color:#000000">王元基、周玉姝</span></strong> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">道法课代表</span></strong>
-							</td>
+								<strong><span style="color:#000000">道法课代表</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">钱薇涵</span></strong>
-							</td>
+								<strong><span style="color:#000000">钱薇涵</span></strong> </td>
 						</tr>
 						<tr>
 							<td style="height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第一组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第一组组长</span></strong> </td>
 							<td style="height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 							<td rowspan="8"
 								style="height:23.00pt; text-align:left; vertical-align:middle; white-space:normal; width:390.65pt">
 								<strong><span
@@ -545,399 +682,1574 @@
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第二组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第二组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第三组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第三组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第四组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第四组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第五组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第五组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第六组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第六组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第七组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第七组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 						<tr>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<strong><span style="color:#000000">第八组组长</span></strong>
-							</td>
+								<strong><span style="color:#000000">第八组组长</span></strong> </td>
 							<td
 								style="border-color:#000000; height:23.00pt; text-align:center; vertical-align:middle; white-space:nowrap">
-								<br>
-							</td>
+								<br> </td>
 						</tr>
 					</tbody>
 				</table>
-    </div>
-    <div class="main-content" id="class-schedule" style="display:none;">
-        <style type="text/css">
-      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
-      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
-      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
-      div.comment { display:none }
-      table { border-collapse:collapse; page-break-after:always }
-      .gridlines td { border:1px dotted black }
-      .gridlines th { border:1px dotted black }
-      .b { text-align:center }
-      .e { text-align:center }
-      .f { text-align:right }
-      .inlineStr { text-align:left }
-      .n { text-align:right }
-      .s { text-align:left }
-      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style1 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style1 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style2 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style2 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style4 { vertical-align:middle; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:2px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style4 { vertical-align:middle; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:2px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style7 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style7 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style8 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style8 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style9 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style9 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style10 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style10 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style13 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style13 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style14 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style14 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style16 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style16 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style17 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style17 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style18 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style18 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style19 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style19 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style20 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style20 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style21 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style21 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style22 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style22 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style23 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style23 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style24 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style24 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style25 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style25 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style26 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style26 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style28 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style28 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style31 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style31 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style32 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      th.style32 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:#DAEEF3 }
-      td.style33 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      th.style33 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:11pt; background-color:white }
-      td.style34 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style34 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      td.style35 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style35 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      td.style36 { vertical-align:middle; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style36 { vertical-align:middle; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      td.style37 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style37 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      td.style38 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style38 { vertical-align:middle; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      td.style39 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:#DAEEF3 }
-      th.style39 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:#DAEEF3 }
-      td.style40 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style40 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      td.style41 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      th.style41 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'宋体'; font-size:6pt; background-color:white }
-      table.sheet0 col.col0 { width:27.1111108pt }
-      table.sheet0 col.col1 { width:31.17777742pt }
-      table.sheet0 col.col2 { width:27.1111108pt }
-      table.sheet0 col.col3 { width:27.1111108pt }
-      table.sheet0 col.col4 { width:27.1111108pt }
-      table.sheet0 col.col5 { width:27.1111108pt }
-      table.sheet0 col.col6 { width:27.1111108pt }
-      table.sheet0 tr { height:15pt }
-      table.sheet0 tr.row0 { height:14pt }
-      table.sheet0 tr.row1 { height:8pt }
-      table.sheet0 tr.row2 { height:8pt }
-      table.sheet0 tr.row3 { height:8pt }
-      table.sheet0 tr.row4 { height:8pt }
-      table.sheet0 tr.row5 { height:8pt }
-      table.sheet0 tr.row6 { height:8pt }
-      table.sheet0 tr.row7 { height:8pt }
-      table.sheet0 tr.row8 { height:8pt }
-      table.sheet0 tr.row9 { height:8pt }
-      table.sheet0 tr.row10 { height:8pt }
-      table.sheet0 tr.row11 { height:8pt }
-      table.sheet0 tr.row12 { height:8pt }
-      table.sheet0 tr.row13 { height:8pt }
-      table.sheet0 tr.row14 { height:8pt }
-      table.sheet0 tr.row15 { height:8pt }
-      table.sheet0 tr.row16 { height:8pt }
-      table.sheet0 tr.row17 { height:8pt }
-    </style>
+			</div>
+			<div class="main-content" id="class-schedule" style="display:none;">
+				<style type="text/css">
+					html {
+						font-family: Calibri, Arial, Helvetica, sans-serif;
+						font-size: 11pt;
+						background-color: white
+					}
 
-    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
-        <col class="col0">
-        <col class="col1">
-        <col class="col2">
-        <col class="col3">
-        <col class="col4">
-        <col class="col5">
-        <col class="col6">
-        <tbody>
-          <tr class="row0">
-            <td class="column0 style34 s style34" colspan="7">初二4班 课程表</td>
-          </tr>
-          <tr class="row1">
-            <td class="column0 style35 s style37" rowspan="2">节次</td>
-            <td class="column1 style36 s">星期</td>
-            <td class="column2 style35 s style37" rowspan="2">星期一</td>
-            <td class="column3 style35 s style37" rowspan="2">星期二</td>
-            <td class="column4 style35 s style37" rowspan="2">星期三</td>
-            <td class="column5 style35 s style37" rowspan="2">星期四</td>
-            <td class="column6 style35 s style37" rowspan="2">星期五</td>
-          </tr>
-          <tr class="row2">
-            <td class="column1 style38 s">时间   课程</td>
-          </tr>
-          <tr class="row3">
-            <td class="column0 style39 s">早自习</td>
-            <td class="column1 style39 s">7:30-8:00</td>
-            <td class="column2 style39 s">语文</td>
-            <td class="column3 style39 s">英语</td>
-            <td class="column4 style39 s">物理</td>
-            <td class="column5 style39 s">语文</td>
-            <td class="column6 style39 s">道法</td>
-          </tr>
-          <tr class="row4">
-            <td class="column0 style37 s">第一节课</td>
-            <td class="column1 style37 s">8:00-8:40</td>
-            <td class="column2 style37 s">道法</td>
-            <td class="column3 style37 s">英语</td>
-            <td class="column4 style37 s">语文</td>
-            <td class="column5 style37 s">数学</td>
-            <td class="column6 style37 s">语文</td>
-          </tr>
-          <tr class="row5">
-            <td class="column0 style37 s">第二节课</td>
-            <td class="column1 style37 s">8:55-9:35</td>
-            <td class="column2 style37 s">物理</td>
-            <td class="column3 style37 s">物理</td>
-            <td class="column4 style37 s">数学</td>
-            <td class="column5 style37 s">地理</td>
-            <td class="column6 style37 s">数学</td>
-          </tr>
-          <tr class="row6">
-            <td class="column0 style40 s">课间操</td>
-            <td class="column1 style40 s">9:35-10:05</td>
-            <td class="column2 style40 s style40" colspan="5">课间操</td>
-          </tr>
-          <tr class="row7">
-            <td class="column0 style37 s">第三节课</td>
-            <td class="column1 style37 s">10:05-10:45</td>
-            <td class="column2 style37 s">体育</td>
-            <td class="column3 style37 s">语文</td>
-            <td class="column4 style37 s">物理</td>
-            <td class="column5 style37 s">英语</td>
-            <td class="column6 style37 s">生物</td>
-          </tr>
-          <tr class="row8">
-            <td class="column0 style40 s">眼保健操</td>
-            <td class="column1 style40 s">10:45-10:50</td>
-            <td class="column2 style40 s style40" colspan="5">眼保健操</td>
-          </tr>
-          <tr class="row9">
-            <td class="column0 style37 s">第四节课</td>
-            <td class="column1 style37 s">11:05-11:45</td>
-            <td class="column2 style37 s">信息</td>
-            <td class="column3 style37 s">语文</td>
-            <td class="column4 style37 s">道法</td>
-            <td class="column5 style37 s">历史</td>
-            <td class="column6 style37 s">英语</td>
-          </tr>
-          <tr class="row10">
-            <td class="column0 style40 s">午餐</td>
-            <td class="column1 style41 s">11:45-12:15</td>
-            <td class="column2 style40 s style40" colspan="5">午餐</td>
-          </tr>
-          <tr class="row11">
-            <td class="column0 style39 s">午自习</td>
-            <td class="column1 style39 s">12:25-12:55</td>
-            <td class="column2 style39 s">地理</td>
-            <td class="column3 style39 s">生物</td>
-            <td class="column4 style39 s">英语</td>
-            <td class="column5 style39 s">历史</td>
-            <td class="column6 style39 s">数学</td>
-          </tr>
-          <tr class="row12">
-            <td class="column0 style37 s">第五节课</td>
-            <td class="column1 style37 s">13:00-13:40</td>
-            <td class="column2 style37 s">英语</td>
-            <td class="column3 style37 s">化学</td>
-            <td class="column4 style37 s">英语</td>
-            <td class="column5 style37 s">体育</td>
-            <td class="column6 style37 s">体育</td>
-          </tr>
-          <tr class="row13">
-            <td class="column0 style37 s">第六节课</td>
-            <td class="column1 style37 s">13:55-14:35</td>
-            <td class="column2 style37 s">语文</td>
-            <td class="column3 style37 s">美术</td>
-            <td class="column4 style37 s">历史</td>
-            <td class="column5 style37 s">物理</td>
-            <td class="column6 style37 s">音乐</td>
-          </tr>
-          <tr class="row14">
-            <td class="column0 style40 s">眼保健操</td>
-            <td class="column1 style40 s">14:35-14:40</td>
-            <td class="column2 style40 s style40" colspan="5">眼保健操</td>
-          </tr>
-          <tr class="row15">
-            <td class="column0 style37 s">第七节课</td>
-            <td class="column1 style37 s">14:55-15:35</td>
-            <td class="column2 style37 s">数学</td>
-            <td class="column3 style37 s">数学</td>
-            <td class="column4 style37 s">地理</td>
-            <td class="column5 style37 s">道法</td>
-            <td class="column6 style37 s">劳技</td>
-          </tr>
-          <tr class="row16">
-            <td class="column0 style37 s">第八节课</td>
-            <td class="column1 style37 s">15:50-16:30</td>
-            <td class="column2 style37 s">班会</td>
-            <td class="column3 style37 s">生物</td>
-            <td class="column4 style37 s">体育</td>
-            <td class="column5 style37 s">语文</td>
-            <td class="column6 style37 s">形体/心理</td>
-          </tr>
-          <tr class="row17">
-            <td class="column0 style40 s">课外活动</td>
-            <td class="column1 style40 s">16:45-17:30</td>
-            <td class="column2 style40 s style40" colspan="5">课外活动</td>
-          </tr>
-        </tbody>
-    </table>
-    </div>
-</section>
+					a.comment-indicator:hover+div.comment {
+						background: #ffd;
+						position: absolute;
+						display: block;
+						border: 1px solid black;
+						padding: 0.5em
+					}
 
+					a.comment-indicator {
+						background: red;
+						display: inline-block;
+						border: 1px solid black;
+						width: 0.5em;
+						height: 0.5em
+					}
 
-<footer>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div class="footer_data" id="footer-img">
-            <img src="{{ url_for('static', filename='img/footer.png') }}" style="width: 53%;">
-            <img src="{{ url_for('static', filename='img/qr_code.png') }}" style="width: 20%; height: auto;">
-        </div>
-        <div class="footer_data" id="footer-text">
-					<span>
-						<a href="/about/course/" style="color: white; text-decoration: none;">使用教程</a>|
-						<a href="/about/manage/" style="color: white; text-decoration: none;">管理事项</a>|
-						<a href="/about/ula/" style="color: white; text-decoration: none;">用户协议</a>|
-						<a href="/about/feedback/" style="color: white; text-decoration: none;">联系我们</a>
-					</span>
-            <br>
-            Developed by the Class Net Dev Team
-            <br>
-            2024-2027，© 班级圈
-            <br>
-            <a href="http://beian.miit.gov.cn/" style="color:white; text-decoration: none;">
-                京ICP备2024080740号
-            </a>
-            <br>
-            All rights reserved.
-        </div>
-    </div>
-</footer>
-<!-- Bookstrap -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-</script>
-<script src="../bootstrap-4.6.2/js/bootstrap.min.js"></script>
+					div.comment {
+						display: none
+					}
 
-<script src="../static/js/refresh_color.js"></script>
-<script src="../static/js/refresh_word.js"></script>
-<script src="../static/js/checker.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.item').click(function () {
-            // remove classes from all
-            $('.item').removeClass('active');
-            // add class to the one we clicked
-            $(this).addClass('active');
-            // hide all tab-content (use class="tabcontent")
-            $('.main-content').hide();
-            // show the one we want (this.id + "content")
-            $('#' + $(this).attr('id').replace('item-', 'class-')).show();
-        });
-    });
-</script>
-</body>
+					table {
+						border-collapse: collapse;
+						page-break-after: always
+					}
+
+					.gridlines td {
+						border: 1px dotted black
+					}
+
+					.gridlines th {
+						border: 1px dotted black
+					}
+
+					.b {
+						text-align: center
+					}
+
+					.e {
+						text-align: center
+					}
+
+					.f {
+						text-align: right
+					}
+
+					.inlineStr {
+						text-align: left
+					}
+
+					.n {
+						text-align: right
+					}
+
+					.s {
+						text-align: left
+					}
+
+					td.style0 {
+						vertical-align: bottom;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style0 {
+						vertical-align: bottom;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style1 {
+						vertical-align: bottom;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style1 {
+						vertical-align: bottom;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style2 {
+						vertical-align: bottom;
+						text-align: center;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style2 {
+						vertical-align: bottom;
+						text-align: center;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style3 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style3 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style4 {
+						vertical-align: middle;
+						text-align: right;
+						padding-right: 0px;
+						border-bottom: none #000000;
+						border-top: 2px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style4 {
+						vertical-align: middle;
+						text-align: right;
+						padding-right: 0px;
+						border-bottom: none #000000;
+						border-top: 2px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style5 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style5 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style6 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style6 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style7 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style7 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style8 {
+						vertical-align: middle;
+						text-align: left;
+						padding-left: 0px;
+						border-bottom: 2px solid #000000 !important;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style8 {
+						vertical-align: middle;
+						text-align: left;
+						padding-left: 0px;
+						border-bottom: 2px solid #000000 !important;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style9 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style9 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style10 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style10 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style11 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style11 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style12 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style12 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style13 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style13 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style14 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style14 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style15 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style15 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style16 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style16 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style17 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style17 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style18 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style18 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style19 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style19 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style20 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style20 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style21 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style21 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style22 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style22 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style23 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style23 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style24 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style24 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 2px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style25 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style25 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: none #000000;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style26 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style26 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style27 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style27 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 2px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style28 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style28 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style29 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style29 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style30 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style30 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style31 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style31 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style32 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					th.style32 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: #DAEEF3
+					}
+
+					td.style33 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					th.style33 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 2px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 2px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 11pt;
+						background-color: white
+					}
+
+					td.style34 {
+						vertical-align: bottom;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style34 {
+						vertical-align: bottom;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						font-weight: bold;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					td.style35 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style35 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: none #000000;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					td.style36 {
+						vertical-align: middle;
+						text-align: right;
+						padding-right: 0px;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style36 {
+						vertical-align: middle;
+						text-align: right;
+						padding-right: 0px;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					td.style37 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style37 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					td.style38 {
+						vertical-align: middle;
+						text-align: left;
+						padding-left: 0px;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style38 {
+						vertical-align: middle;
+						text-align: left;
+						padding-left: 0px;
+						border-bottom: none #000000;
+						border-top: none #000000;
+						border-left: none #000000;
+						border-right: none #000000;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					td.style39 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: #DAEEF3
+					}
+
+					th.style39 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: #DAEEF3
+					}
+
+					td.style40 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style40 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					td.style41 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					th.style41 {
+						vertical-align: middle;
+						text-align: center;
+						border-bottom: 1px solid #000000 !important;
+						border-top: 1px solid #000000 !important;
+						border-left: 1px solid #000000 !important;
+						border-right: 1px solid #000000 !important;
+						color: #000000;
+						font-family: '宋体';
+						font-size: 6pt;
+						background-color: white
+					}
+
+					table.sheet0 col.col0 {
+						width: 27.1111108pt
+					}
+
+					table.sheet0 col.col1 {
+						width: 31.17777742pt
+					}
+
+					table.sheet0 col.col2 {
+						width: 27.1111108pt
+					}
+
+					table.sheet0 col.col3 {
+						width: 27.1111108pt
+					}
+
+					table.sheet0 col.col4 {
+						width: 27.1111108pt
+					}
+
+					table.sheet0 col.col5 {
+						width: 27.1111108pt
+					}
+
+					table.sheet0 col.col6 {
+						width: 27.1111108pt
+					}
+
+					table.sheet0 tr {
+						height: 15pt
+					}
+
+					table.sheet0 tr.row0 {
+						height: 14pt
+					}
+
+					table.sheet0 tr.row1 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row2 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row3 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row4 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row5 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row6 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row7 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row8 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row9 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row10 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row11 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row12 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row13 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row14 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row15 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row16 {
+						height: 8pt
+					}
+
+					table.sheet0 tr.row17 {
+						height: 8pt
+					}
+				</style>
+				<table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+					<col class="col0">
+					<col class="col1">
+					<col class="col2">
+					<col class="col3">
+					<col class="col4">
+					<col class="col5">
+					<col class="col6">
+					<tbody>
+						<tr class="row0">
+							<td class="column0 style34 s style34" colspan="7">初二4班 课程表</td>
+						</tr>
+						<tr class="row1">
+							<td class="column0 style35 s style37" rowspan="2">节次</td>
+							<td class="column1 style36 s">星期</td>
+							<td class="column2 style35 s style37" rowspan="2">星期一</td>
+							<td class="column3 style35 s style37" rowspan="2">星期二</td>
+							<td class="column4 style35 s style37" rowspan="2">星期三</td>
+							<td class="column5 style35 s style37" rowspan="2">星期四</td>
+							<td class="column6 style35 s style37" rowspan="2">星期五</td>
+						</tr>
+						<tr class="row2">
+							<td class="column1 style38 s">时间 课程</td>
+						</tr>
+						<tr class="row3">
+							<td class="column0 style39 s">早自习</td>
+							<td class="column1 style39 s">7:30-8:00</td>
+							<td class="column2 style39 s">语文</td>
+							<td class="column3 style39 s">英语</td>
+							<td class="column4 style39 s">物理</td>
+							<td class="column5 style39 s">语文</td>
+							<td class="column6 style39 s">道法</td>
+						</tr>
+						<tr class="row4">
+							<td class="column0 style37 s">第一节课</td>
+							<td class="column1 style37 s">8:00-8:40</td>
+							<td class="column2 style37 s">道法</td>
+							<td class="column3 style37 s">英语</td>
+							<td class="column4 style37 s">语文</td>
+							<td class="column5 style37 s">数学</td>
+							<td class="column6 style37 s">语文</td>
+						</tr>
+						<tr class="row5">
+							<td class="column0 style37 s">第二节课</td>
+							<td class="column1 style37 s">8:55-9:35</td>
+							<td class="column2 style37 s">物理</td>
+							<td class="column3 style37 s">物理</td>
+							<td class="column4 style37 s">数学</td>
+							<td class="column5 style37 s">地理</td>
+							<td class="column6 style37 s">数学</td>
+						</tr>
+						<tr class="row6">
+							<td class="column0 style40 s">课间操</td>
+							<td class="column1 style40 s">9:35-10:05</td>
+							<td class="column2 style40 s style40" colspan="5">课间操</td>
+						</tr>
+						<tr class="row7">
+							<td class="column0 style37 s">第三节课</td>
+							<td class="column1 style37 s">10:05-10:45</td>
+							<td class="column2 style37 s">体育</td>
+							<td class="column3 style37 s">语文</td>
+							<td class="column4 style37 s">物理</td>
+							<td class="column5 style37 s">英语</td>
+							<td class="column6 style37 s">生物</td>
+						</tr>
+						<tr class="row8">
+							<td class="column0 style40 s">眼保健操</td>
+							<td class="column1 style40 s">10:45-10:50</td>
+							<td class="column2 style40 s style40" colspan="5">眼保健操</td>
+						</tr>
+						<tr class="row9">
+							<td class="column0 style37 s">第四节课</td>
+							<td class="column1 style37 s">11:05-11:45</td>
+							<td class="column2 style37 s">信息</td>
+							<td class="column3 style37 s">语文</td>
+							<td class="column4 style37 s">道法</td>
+							<td class="column5 style37 s">历史</td>
+							<td class="column6 style37 s">英语</td>
+						</tr>
+						<tr class="row10">
+							<td class="column0 style40 s">午餐</td>
+							<td class="column1 style41 s">11:45-12:15</td>
+							<td class="column2 style40 s style40" colspan="5">午餐</td>
+						</tr>
+						<tr class="row11">
+							<td class="column0 style39 s">午自习</td>
+							<td class="column1 style39 s">12:25-12:55</td>
+							<td class="column2 style39 s">地理</td>
+							<td class="column3 style39 s">生物</td>
+							<td class="column4 style39 s">英语</td>
+							<td class="column5 style39 s">历史</td>
+							<td class="column6 style39 s">数学</td>
+						</tr>
+						<tr class="row12">
+							<td class="column0 style37 s">第五节课</td>
+							<td class="column1 style37 s">13:00-13:40</td>
+							<td class="column2 style37 s">英语</td>
+							<td class="column3 style37 s">化学</td>
+							<td class="column4 style37 s">英语</td>
+							<td class="column5 style37 s">体育</td>
+							<td class="column6 style37 s">体育</td>
+						</tr>
+						<tr class="row13">
+							<td class="column0 style37 s">第六节课</td>
+							<td class="column1 style37 s">13:55-14:35</td>
+							<td class="column2 style37 s">语文</td>
+							<td class="column3 style37 s">美术</td>
+							<td class="column4 style37 s">历史</td>
+							<td class="column5 style37 s">物理</td>
+							<td class="column6 style37 s">音乐</td>
+						</tr>
+						<tr class="row14">
+							<td class="column0 style40 s">眼保健操</td>
+							<td class="column1 style40 s">14:35-14:40</td>
+							<td class="column2 style40 s style40" colspan="5">眼保健操</td>
+						</tr>
+						<tr class="row15">
+							<td class="column0 style37 s">第七节课</td>
+							<td class="column1 style37 s">14:55-15:35</td>
+							<td class="column2 style37 s">数学</td>
+							<td class="column3 style37 s">数学</td>
+							<td class="column4 style37 s">地理</td>
+							<td class="column5 style37 s">道法</td>
+							<td class="column6 style37 s">劳技</td>
+						</tr>
+						<tr class="row16">
+							<td class="column0 style37 s">第八节课</td>
+							<td class="column1 style37 s">15:50-16:30</td>
+							<td class="column2 style37 s">班会</td>
+							<td class="column3 style37 s">生物</td>
+							<td class="column4 style37 s">体育</td>
+							<td class="column5 style37 s">语文</td>
+							<td class="column6 style37 s">形体/心理</td>
+						</tr>
+						<tr class="row17">
+							<td class="column0 style40 s">课外活动</td>
+							<td class="column1 style40 s">16:45-17:30</td>
+							<td class="column2 style40 s style40" colspan="5">课外活动</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<footer>
+			<div style="display: flex; justify-content: space-between; align-items: center;">
+				<div class="footer_data" id="footer-img"> <img src="{{ url_for('static', filename='img/footer.png') }}"
+						style="width: 53%;"> <img src="{{ url_for('static', filename='img/qr_code.png') }}"
+						style="width: 20%; height: auto;"> </div>
+				<div class="footer_data" id="footer-text"> <span> <a href="/about/course/"
+							style="color: white; text-decoration: none;">使用教程</a>| <a href="/about/manage/"
+							style="color: white; text-decoration: none;">管理事项</a>| <a href="/about/ula/"
+							style="color: white; text-decoration: none;">用户协议</a>| <a href="/about/feedback/"
+							style="color: white; text-decoration: none;">联系我们</a> </span> <br> Developed by the Class
+					Net Dev Team <br> 2024-2027，© 班级圈 <br> <a href="http://beian.miit.gov.cn/"
+						style="color:white; text-decoration: none;"> 京ICP备2024080740号 </a> <br> All rights reserved.
+				</div>
+			</div>
+		</footer> <!-- Bookstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+		</script>
+		<script src="../bootstrap-4.6.2/js/bootstrap.min.js"></script>
+		<script src="../static/js/refresh_color.js"></script>
+		<script src="../static/js/refresh_word.js"></script>
+		<script src="../static/js/checker.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.item').click(function() {
+					// remove classes from all
+					$('.item').removeClass('active');
+					// add class to the one we clicked
+					$(this).addClass('active');
+					// hide all tab-content (use class="tabcontent")
+					$('.main-content').hide();
+					// show the one we want (this.id + "content")
+					$('#' + $(this).attr('id').replace('item-', 'class-')).show();
+				});
+			});
+		</script>
+	</body>
 </html>

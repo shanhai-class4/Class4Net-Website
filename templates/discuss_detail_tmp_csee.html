@@ -71,7 +71,7 @@
 		<header>
 		<a href="/" id = "head_logo_text">
 				<div>
-					<img src="../../../../static/img/logo.png" alt="logo" id = "logo_img" />
+					<img src="../../../static/img/logo.png" alt="logo" id = "logo_img" />
 				</div>
 				<div>
 					<div id = "logo_text_h">
@@ -85,17 +85,17 @@
 			{% if session['id'] != -1 %}
 			<div id = "header_buttons">
 				<a href="/discuss/new/" target="_blank">
-					<img src="../../../../static/img/new_ico.png" alt="新建" class = "header_button_img" />
+					<img src="../../../static/img/new_ico.png" alt="新建" class = "header_button_img" />
 				</a>
 				<a href="/discuss/list/" target="_blank">
-					<img src="../../../../static/img/search_ico.png" alt="搜索" class = "header_button_img" />
+					<img src="../../../static/img/search_ico.png" alt="搜索" class = "header_button_img" />
 				</a>
 				<a href="/user/me/" target="_blank">
-					<img src="../../../../static/img/person_ico.png" alt="个人" class = "header_button_img" />
+					<img src="../../../static/img/person_ico.png" alt="个人" class = "header_button_img" />
 				</a>
 				{% if session['admin'] %}
 				<a href="/setting/" target="_blank">
-					<img src="../../../../static/img/setting_ico.png" alt="设置" class = "header_button_img" />
+					<img src=".././../static/img/setting_ico.png" alt="设置" class = "header_button_img" />
 				</a>
 				{% endif %}
 			</div>

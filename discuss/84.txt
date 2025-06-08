@@ -1,9 +1,0 @@
-\##\*\*\==抽大奖\=?\*\@@
-
-
-<form action="/discuss/84/form_handle/1/" method = "POST" target="_self">
-<input type="text" name = "1">
-<input type="text" name = "2">
-<input type="text" name = "3">
-<input type="submit">
-</form>

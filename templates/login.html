@@ -18,7 +18,8 @@
         }
 
         strong {
-            align-self: center;
+           align-self: center;
+	   color:white;
         }
 
         * {
@@ -212,7 +213,7 @@
                 </div>
             </div>
         </form>
-        <div class="out" ><strong>点击“登录”表示您已阅读并同意<a href="../about/user/">《班级圈用户协议》</a></strong></div><br \>
+        <div class="out" style="color:white;"><strong>点击“登录”表示您已阅读并同意<i><a href="../about/ula/" style="color:white;">《班级圈用户协议》</a></i></strong></div><br \>
         {% for err in errors %}
         <div class="out" >
             <strong style="color: red;"> {{ err }} </strong>

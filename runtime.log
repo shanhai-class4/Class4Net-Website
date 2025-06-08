@@ -1,49 +1,444 @@
-2025-05-12 21:14:36 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\main.py line:2320] WARNING This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
-2025-05-12 21:14:36 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] WARNING  * Debugger is active!
-2025-05-12 21:14:36 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO  * Debugger PIN: 273-496-084
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:248] INFO Try To Call 5
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:251] INFO 5,(5, 3, '�ڴ��༶Ȧ�����ᾫ�ʱ���', '�༶Ȧ,����', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:248] INFO Try To Call 7
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:251] INFO 7,(7, 5, '��ϲ��ϲ��', '���ۻظ�', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:248] INFO Try To Call 19
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:251] INFO 19,(19, 0, '����', '�༶Ȧ,�ٷ�', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:248] INFO Try To Call 22
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:251] INFO 22,(22, 11, '�ڴ�������', '���ۻظ�', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:248] INFO Try To Call 24
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:251] INFO 24,(24, 13, 'Ī�б����Ҳ��Ű�QWQ@�O��', '���ۻظ�', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\main.py line:255] INFO [(5, 15, '�����ն��µĶ�������һ��˼ά��ͼ�������ز�~', '��', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '�༶Ȧ����԰�أ�2024��һ�ڣ�', '�༶Ȧ,�ٷ�,����,ѧ��֪ʶ��԰', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '֪ͨ�������ڰ༶ȦĿǰ�汾���ڵ����⼰��ʱ�������', '�༶Ȧ,bug,bug����', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '�����İ�༶Ȧ��վ�ڽ�����ʽ����', '����,��Ϣ,�༶Ȧ', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')]
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:422] INFO 5
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:425] INFO 5,(5, 15, '�����ն��µĶ�������һ��˼ά��ͼ�������ز�~', '��', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:422] INFO 2
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:425] INFO 2,(2, 0, '�༶Ȧ����԰�أ�2024��һ�ڣ�', '�༶Ȧ,�ٷ�,����,ѧ��֪ʶ��԰', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:422] INFO 4
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:425] INFO 4,(4, 0, '֪ͨ�������ڰ༶ȦĿǰ�汾���ڵ����⼰��ʱ�������', '�༶Ȧ,bug,bug����', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:422] INFO 3
-2025-05-12 21:14:50 root [M:\ClassNet4\v1.1.4.2.8.7\cn4\database.py line:425] INFO 3,(3, 0, '�����İ�༶Ȧ��վ�ڽ�����ʽ����', '����,��Ϣ,�༶Ȧ', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET / HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/css/std.css HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/forum.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/bootstrap-4.6.2/css/bootstrap.min.css HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/information.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/logo.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/activity.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/bootstrap-4.6.2/js/bootstrap.min.js HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/resource.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/bootstrap-4.6.2/css/bootstrap.css HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/js/refresh_color.js HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/js/refresh_word.js HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/js/checker.js HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/album.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/develop.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/discuss_img/21.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/discuss_img/22.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/discuss_img/23.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/discuss_img/9.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/user_pic/7.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/user_pic/50.jpg HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/user_pic/34.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/footer.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/album/9/΢��ͼƬ_20240713164501.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/img/qr_code.png HTTP/1.1" 200 -
-2025-05-12 21:14:50 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:50] "GET /static/css/pingfang0_0.ttf HTTP/1.1" 200 -
-2025-05-12 21:14:51 root [C:\Users\yinhu\AppData\Roaming\Python\Python312\site-packages\werkzeug\_internal.py line:96] INFO 127.0.0.1 - - [12/May/2025 21:14:51] "GET /favicon.ico HTTP/1.1" 200 -
+2025-03-01 14:16:19 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 14:16:19 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:16:19 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 14:16:19 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 14:16:20 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 14:16:20 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1279x2545
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1218x672
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1279x2510
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:33 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:34 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：958x1278
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:34:35 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1272x708
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:18 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1702x1276
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:37:19 root [/Class4Net/cn4/main.py line:1680] INFO 图片尺寸：1276x1702
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 14:43:10 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 14:43:10 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 14:43:13 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 14:43:13 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 14:57:46 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 14:57:46 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 67
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 67,(67, 0, '[私信]', '私信', '2025-02-01 10:51:14', 34, '12', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 78
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 78,(78, 0, '[私信]', '私信', '2025-02-06 11:02:47', 7, '34', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 79
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 79,(79, 0, '[私信]', '私信', '2025-02-06 11:02:56', 7, '34', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 80
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 80,(80, 0, '[私信]', '私信', '2025-02-06 11:03:46', 34, '7', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 81
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 81,(81, 0, '[私信]', '私信', '2025-02-06 11:06:31', 32, '6,34', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 82
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 82,(82, 0, '[私信]', '私信', '2025-02-06 11:06:33', 34, '7,20预备 各就各位 一二三 跳 跳进染缸 看谁先 游向欲望 膨胀 膨胀 再膨胀 就像那数字一样 谁没有信仰 谁没有思想 谁没有最便宜的酒来陪葬 一二三跳 跳进染缸 看谁先 游向欲望 遗忘 遗忘 再遗忘 就像我们记得的那样 缸里有梦想 缸底有烂帐 谁赔了信仰 谁对自己撒谎 谁喝着最便宜的酒去陪葬 一二三跳 跳进染缸 看谁先 游向欲望 可就连食色性也终将 游向死亡 游向死亡 于是砸了染缸 砸了染缸 才看见大海茫茫 而你我仍不知身在何方', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 89
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 89,(89, 0, '[私信]', '私信', '2025-02-06 11:36:48', 48, '34', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 97
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 97,(97, 0, '[私信]', '私信', '2025-02-22 13:48:50', 7, '34', 0, 0, None, None)
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 98
+2025-03-01 14:58:50 root [/Class4Net/cn4/database.py line:251] INFO 98,(98, 0, '[私信]', '私信', '2025-02-22 13:51:51', 34, '7', 0, 0, None, None)
+2025-03-01 14:59:06 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 98
+2025-03-01 14:59:06 root [/Class4Net/cn4/database.py line:251] INFO 98,(98, 0, '[私信]', '私信', '2025-02-22 13:51:51', 34, '7', 0, 0, None, None)
+2025-03-01 14:59:06 root [/Class4Net/cn4/database.py line:390] INFO TaList2[(92, 0, '钢丝mod截图喜', '钢丝,资源', '2025-02-13 22:54:43', 34, '20', 0, 0, None, None), (65, 0, '关于目前一些使用上的问题与解决办法', '班级圈,bug', '2024-12-15 15:42:36', 34, 'all', 0, 0, None, None), (49, 31, '请留意的地方', '问题', '2024-09-06 06:45:21', 34, '0', 0, 0, 'None', 'None'), (31, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'None', 'None')]
+2025-03-01 14:59:06 root [/Class4Net/cn4/database.py line:397] INFO TaList1[(92, 0, '钢丝mod截图喜', '钢丝,资源', '2025-02-13 22:54:43', 34, '20', 0, 0, None, None), (65, 0, '关于目前一些使用上的问题与解决办法', '班级圈,bug', '2024-12-15 15:42:36', 34, 'all', 0, 0, None, None), (49, 31, '请留意的地方', '问题', '2024-09-06 06:45:21', 34, '0', 0, 0, 'None', 'None'), (31, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'None', 'None')]
+2025-03-01 14:59:15 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 98
+2025-03-01 14:59:16 root [/Class4Net/cn4/database.py line:251] INFO 98,(98, 0, '[私信]', '私信', '2025-02-22 13:51:51', 34, '7', 0, 0, None, None)
+2025-03-01 15:01:12 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 99
+2025-03-01 15:01:12 root [/Class4Net/cn4/database.py line:251] INFO 99,(99, 0, '[私信]', '私信', '2025-03-01 14:59:01', 34, '20', 0, 0, None, None)
+2025-03-01 15:01:12 root [/Class4Net/cn4/database.py line:390] INFO TaList2[(92, 0, '钢丝mod截图喜', '钢丝,资源', '2025-02-13 22:54:43', 34, '20', 0, 0, None, None), (65, 0, '关于目前一些使用上的问题与解决办法', '班级圈,bug', '2024-12-15 15:42:36', 34, 'all', 0, 0, None, None), (49, 31, '请留意的地方', '问题', '2024-09-06 06:45:21', 34, '0', 0, 0, 'None', 'None'), (31, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'None', 'None')]
+2025-03-01 15:01:12 root [/Class4Net/cn4/database.py line:397] INFO TaList1[(92, 0, '钢丝mod截图喜', '钢丝,资源', '2025-02-13 22:54:43', 34, '20', 0, 0, None, None), (65, 0, '关于目前一些使用上的问题与解决办法', '班级圈,bug', '2024-12-15 15:42:36', 34, 'all', 0, 0, None, None), (49, 31, '请留意的地方', '问题', '2024-09-06 06:45:21', 34, '0', 0, 0, 'None', 'None'), (31, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'None', 'None')]
+2025-03-01 15:02:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 82
+2025-03-01 15:02:11 root [/Class4Net/cn4/database.py line:251] INFO 82,(82, 0, '[私信]', '私信', '2025-02-06 11:06:33', 34, '7,20预备 各就各位 一二三 跳 跳进染缸 看谁先 游向欲望 膨胀 膨胀 再膨胀 就像那数字一样 谁没有信仰 谁没有思想 谁没有最便宜的酒来陪葬 一二三跳 跳进染缸 看谁先 游向欲望 遗忘 遗忘 再遗忘 就像我们记得的那样 缸里有梦想 缸底有烂帐 谁赔了信仰 谁对自己撒谎 谁喝着最便宜的酒去陪葬 一二三跳 跳进染缸 看谁先 游向欲望 可就连食色性也终将 游向死亡 游向死亡 于是砸了染缸 砸了染缸 才看见大海茫茫 而你我仍不知身在何方', 0, 0, None, None)
+2025-03-01 15:02:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 99
+2025-03-01 15:02:11 root [/Class4Net/cn4/database.py line:251] INFO 99,(99, 0, '[私信]', '私信', '2025-03-01 14:59:01', 34, '20', 0, 0, None, None)
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:06:18 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:06:18 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:07:05 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:07:05 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:29:28 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:29:28 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 16:13:50 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 16:13:50 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 16:13:52 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 16:13:52 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+ root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 14:59:30 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 14:59:30 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:01:04 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:01:04 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:01:09 root [/Class4Net/cn4/database.py line:132] INFO 未裁减个人论坛列表：[]
+2025-03-01 15:01:09 root [/Class4Net/cn4/database.py line:139] INFO 裁减后个人论坛列表：[]
+2025-03-01 15:01:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 82
+2025-03-01 15:01:11 root [/Class4Net/cn4/database.py line:251] INFO 82,(82, 0, '[私信]', '私信', '2025-02-06 11:06:33', 34, '7,20预备 各就各位 一二三 跳 跳进染缸 看谁先 游向欲望 膨胀 膨胀 再膨胀 就像那数字一样 谁没有信仰 谁没有思想 谁没有最便宜的酒来陪葬 一二三跳 跳进染缸 看谁先 游向欲望 遗忘 遗忘 再遗忘 就像我们记得的那样 缸里有梦想 缸底有烂帐 谁赔了信仰 谁对自己撒谎 谁喝着最便宜的酒去陪葬 一二三跳 跳进染缸 看谁先 游向欲望 可就连食色性也终将 游向死亡 游向死亡 于是砸了染缸 砸了染缸 才看见大海茫茫 而你我仍不知身在何方', 0, 0, None, None)
+2025-03-01 15:01:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 99
+2025-03-01 15:01:11 root [/Class4Net/cn4/database.py line:251] INFO 99,(99, 0, '[私信]', '私信', '2025-03-01 14:59:01', 34, '20', 0, 0, None, None)
+2025-03-01 15:03:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 82
+2025-03-01 15:03:11 root [/Class4Net/cn4/database.py line:251] INFO 82,(82, 0, '[私信]', '私信', '2025-02-06 11:06:33', 34, '7,20预备 各就各位 一二三 跳 跳进染缸 看谁先 游向欲望 膨胀 膨胀 再膨胀 就像那数字一样 谁没有信仰 谁没有思想 谁没有最便宜的酒来陪葬 一二三跳 跳进染缸 看谁先 游向欲望 遗忘 遗忘 再遗忘 就像我们记得的那样 缸里有梦想 缸底有烂帐 谁赔了信仰 谁对自己撒谎 谁喝着最便宜的酒去陪葬 一二三跳 跳进染缸 看谁先 游向欲望 可就连食色性也终将 游向死亡 游向死亡 于是砸了染缸 砸了染缸 才看见大海茫茫 而你我仍不知身在何方', 0, 0, None, None)
+2025-03-01 15:03:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 99
+2025-03-01 15:03:11 root [/Class4Net/cn4/database.py line:251] INFO 99,(99, 0, '[私信]', '私信', '2025-03-01 14:59:01', 34, '20', 0, 0, None, None)
+2025-03-01 15:04:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 82
+2025-03-01 15:04:11 root [/Class4Net/cn4/database.py line:251] INFO 82,(82, 0, '[私信]', '私信', '2025-02-06 11:06:33', 34, '7,20预备 各就各位 一二三 跳 跳进染缸 看谁先 游向欲望 膨胀 膨胀 再膨胀 就像那数字一样 谁没有信仰 谁没有思想 谁没有最便宜的酒来陪葬 一二三跳 跳进染缸 看谁先 游向欲望 遗忘 遗忘 再遗忘 就像我们记得的那样 缸里有梦想 缸底有烂帐 谁赔了信仰 谁对自己撒谎 谁喝着最便宜的酒去陪葬 一二三跳 跳进染缸 看谁先 游向欲望 可就连食色性也终将 游向死亡 游向死亡 于是砸了染缸 砸了染缸 才看见大海茫茫 而你我仍不知身在何方', 0, 0, None, None)
+2025-03-01 15:04:11 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 99
+2025-03-01 15:04:11 root [/Class4Net/cn4/database.py line:251] INFO 99,(99, 0, '[私信]', '私信', '2025-03-01 14:59:01', 34, '20', 0, 0, None, None)
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:06:47 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:06:47 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:13:20 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:13:20 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:16:02 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:16:02 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 5
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:251] INFO 5,(5, 3, '期待班级圈发布会精彩表现', '班级圈,测试', '2024-08-19 18:59:17', 7, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 7
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:251] INFO 7,(7, 5, '恭喜恭喜！', '评论回复', '2024-08-19 19:00:58', 7, 'all', 0, 0, None, None)
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 19
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:251] INFO 19,(19, 0, '成语活动', '班级圈,官方', '2024-08-19 21:57:41', 35, 'all', 0, 0, 'None', 'None')
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 22
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:251] INFO 22,(22, 11, '期待！！！', '评论回复', '2024-08-20 09:41:09', 34, 'all', 0, 0, None, None)
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:248] INFO Try To Call 24
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:251] INFO 24,(24, 13, '莫有标题找不着啊QWQ@贠涵', '评论回复', '2024-08-20 15:31:53', 34, 'all', 0, 0, None, None)
+2025-03-01 15:39:00 root [/Class4Net/cn4/main.py line:250] INFO [(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None'), (2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None'), (4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None'), (3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None'), (6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)]
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:422] INFO 5
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:425] INFO 5,(5, 15, '关于苏东坡的对联，和一个思维导图的文字素材~', '无', '2024-08-21 17:45:12', 35, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:422] INFO 2
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:425] INFO 2,(2, 0, '班级圈语文园地（2024第一期）', '班级圈,官方,语文,学科知识花园', '2024-08-22 17:59:57', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:422] INFO 4
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:425] INFO 4,(4, 0, '通知——关于班级圈目前版本存在的问题及临时解决方法', '班级圈,bug,bug反馈', '2024-08-22 19:54:26', 34, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:422] INFO 3
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:425] INFO 3,(3, 0, '初二四班班级圈网站于今日正式发布', '新闻,消息,班级圈', '2024-09-06 19:30:00', 7, 'all', 0, 0, 'NO', 'None')
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:422] INFO 6
+2025-03-01 15:39:00 root [/Class4Net/cn4/database.py line:425] INFO 6,(6, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, 'NO', None)
+2025-03-01 15:46:06 root [/Class4Net/cn4/database.py line:132] INFO 未裁减个人论坛列表：[(74, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, None, None)]
+2025-03-01 15:46:06 root [/Class4Net/cn4/database.py line:139] INFO 裁减后个人论坛列表：[(74, 0, '作文素材积累-文案合集1', '文案合集,作文素材,写作,作文,语文', '2025-02-03 21:58:50', 2, 'all', 0, 0, None, None)]
