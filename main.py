@@ -1,7 +1,5 @@
 # -*- coding: UTF-8 -*-
 import sqlite3
-from database import *
-from utils import *
 from flask import *
 import flask
 from database import *
@@ -13,13 +11,18 @@ import os.path
 import random
 import cv2
 import numpy
-from utils import *
 import shelve
 import io
 #from flask_mail import Mail, Message
 from wsgiref.simple_server import make_server
-from dsearch import *
 import logging
+from database import *
+from utils import *
+from dsearch import *
+
+# WEBSITE ROOT PASSWORD
+root_password = "74CNYMBDSLP-20240712"
+# 2025-7-1 换密码94CNBJQWRPW-20250701
 
 file_handler = logging.FileHandler('runtime.log')  # 写入当前文件所在目录的文件，没有自动创建
 file_handler.setLevel(logging.DEBUG)
@@ -166,7 +169,7 @@ def randstr(charset=list(string.ascii_lowercase + string.ascii_uppercase + strin
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "74CNYMBDSLP-20240712"
+app.config['SECRET_KEY'] = root_password
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 app.config['MAIL_SERVER'] = 'smtp.163.com'
 app.config['MAIL_USE_SSL'] = True
@@ -219,6 +222,8 @@ def default_session():
         session['capt_code'] = None
     if 'login_times' not in session:
         session['login_times'] = 0
+    if 'clc' not in session:
+        session['clc'] = False
 
 
 @app.route('/')
@@ -250,7 +255,7 @@ def index():
     logging.info(str(res))
     for i in range(min(len(res), 5)):
         res_list.append(Resource(res[i][0]))
-    showd = [i for i in showd if '评论回复' not in i.subject]
+    showd = [i for i in showd if '评论回复' not in i.subject and '私信' not in i.subject and '团队讨论' not in i.subject and '隐藏' not in i.subject]
     
     i = 1
     nimg_src = ""
@@ -271,26 +276,24 @@ def index():
                     nimg_date = datetime.fromtimestamp(dt)
         i += 1
         #strftime("%Y-%m-%d %H:%M:%S")
-    
+    f = open('./data/code.txt', 'r', encoding='utf-8')
+    codes = f.read()
+    f.close()
     return render_template("index.html", session=session, cex_picid1 = cpi1, cex_picid2 = cpi2, cex_picid3 = cpi3, cex_words_1=word1, cex_words_2=word2, cex_words_3=word3,
                            cex_link_1=link1, cex_link_2=link2, cex_link_3=link3,cex_swd1=swd1, cex_swd2=swd2, cex_swd3=swd3, hwid=hwid, hwpid=hwpid, grs=cooked_grs,
-                           dis=showd, act=new_act, res=res_list, xc = (nimg_src, nimg_date))
+                           dis=showd, act=new_act, res=res_list, xc = (nimg_src, nimg_date), codes = codes)
 
 
 @app.route('/debug/')
 def debug():
-    if not session.get('login'):
-        return redirect('/login/')
-    if not User(session['id']).admin:
+    if not session.get('clc'):
         return redirect('/')
     return render_template("debug.html", session=session, content='You have not read any file.', d1="---", d2="---")
 
 
 @app.route("/debug/handle1/", methods=['POST'])
 def debug_handle1():
-    if not session.get('login'):
-        return redirect('/login/')
-    if not User(session['id']).admin:
+    if not session.get('clc'):
         return redirect('/')
     name = request.form.get('docname', '')
     if name == "main.py":
@@ -312,9 +315,7 @@ def debug_handle1():
 
 @app.route("/debug/handle2/", methods=['POST'])
 def debug_handle2():
-    if not session.get('login'):
-        return redirect('/login/')
-    if not User(session['id']).admin:
+    if not session.get('clc'):
         return redirect('/')
     name = request.form.get('docname', '')
     con = request.form.get('txt', '')
@@ -337,9 +338,7 @@ def debug_handle2():
 
 @app.route('/debug/handle3/', methods=['POST'])
 def debug_handle_3():
-    if not session.get('login'):
-        return redirect('/login/')
-    if not User(session['id']).admin:
+    if not session.get('clc'):
         return redirect('/')
     cmd = request.form.get('SQL', '')
     c = get_cursor()
@@ -386,6 +385,8 @@ def luser():
 
 @app.route('/lfs/')
 def lfs():
+    if not session.get('clc'):
+        return redirect('/')
     show = "<pre>"
     for key in session:
         show += str(key) + ":" + str(session[key]) + "<br \\>"
@@ -394,6 +395,8 @@ def lfs():
 
 @app.route('/lfu/<int:id>/')
 def lfu(id):
+    if not session.get('clc'):
+        return redirect('/')
     u = User(id)
     show = "<pre>"
     for attr in dir(u):
@@ -405,6 +408,8 @@ def lfu(id):
 
 @app.route('/lfd/<int:id>/')
 def lfd(id):
+    if not session.get('clc'):
+        return redirect('/')
     d = Discuss(id)
     show = "<pre>"
     for attr in dir(d):
@@ -413,6 +418,25 @@ def lfd(id):
             show += str(attr) + ":" + str(value) + "<br \\>"
     show += "</pre>"
     return show
+
+
+@app.route('/clc_login/')
+def clclogin():
+    return "<form action = '/clc_login_handle/' target = '_self' method = 'POST'><input type = 'password' name = 'clc' placeholder = '请输入网站根密码/CLC权限密码...' style = 'width:100%;height:100px;'></form>"
+
+@app.route('/clc_login_handle/', methods = ['POST'])
+def clchandle():
+    pw = request.form.get('clc', '')
+    if pw == root_password:
+        session['clc'] = True
+    return redirect('/')
+
+@app.route('/clc_logout/')
+def clclogout():
+    session['clc'] = False
+    return redirect('/')
+
+#=============================================
 
 
 @app.route('/captcha/')
@@ -885,7 +909,7 @@ def discuss_detail_tmp(id):
                            csee=d.csee,
                            csee_cnt=d.csee_cnt,
                            toped=d.top,
-                           content=render(d.all_data), 
+                           content=render(d.all_data, tmp = 1), 
                            selfid = id
                            )
 
@@ -1473,8 +1497,10 @@ def discuss_search():
         ff = []
         [ff.append(i) for i in fg if i not in ff]
         res = ff
+    res = [i for i in res if '团队讨论' not in i.subject]
     res = [i for i in res if '私信' not in i.subject]
     res = [i for i in res if '评论回复' not in i.subject]
+    res = [i for i in res if '隐藏' not in i.subject]
     return render_template("discuss_list.html", session=session, rsearch=rsearch, dis=res)
 
 

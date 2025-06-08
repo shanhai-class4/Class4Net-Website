@@ -16,7 +16,7 @@
     <style>
         .no-radius {
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 0px;
         }
 
         #footer-text {
@@ -48,29 +48,6 @@
                 font-size: 12px;
             }
         }
-	.rdiv {
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		transition: left 0.5s ease-in-out;
-	
-	}
-	.ctitle {
-		text-align: left;
-			            color: #222;
-			            font-size: 30px;
-			            margin: 15px;
-			            /*font-weight: bold;
-			            */padding-left: 10px;
-			            border-left: 4px solid rgb(169, 178, 209);
-			        
-		margin-left: 5px;
-	}
-	.resource {
-		margin: 10px;
-		font-size: 15px;
-	}
-	h1 {
-		font-size: 27px;
-	}
     </style>
 	
 	<meta name="description" content="2023级4班班级圈">
@@ -119,6 +96,13 @@
         </p>
     {% endif %}
 </header>
+{% if codes != "" %}
+<section>
+    <div class="row rdiv pack">
+		{{ codes | safe }}
+	</div>
+</section>
+{% endif %}
 <nav id="navbar" class="nav nav-pills nav-justified">
     <div class="nav-link">
         <a class="nav_link" href="/information/" target="_blank">
@@ -361,30 +345,7 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
 </script>
 <script src="../static/bootstrap-4.6.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(window).scroll(function() {
-    $('.rdiv').each(function() {
-        const blockTop = $(this).offset().top;
-        const windowHeight = $(window).height();
-        const scrollTop = $(this).scrollTop();
-        if (blockTop - scrollTop < windowHeight) {
-            $(this).css('left', '0');
-        }
-    });
-});</script>
-<script>
-window.addEventListener('scroll', function() {
-    const blocks = document.querySelectorAll('.rdiv');
-    blocks.forEach(function(block) {
-        const blockTop = block.offsetTop;
-        const windowHeight = window.innerHeight;
-        const scrollTop = window.scrollY;
-        if (blockTop - scrollTop < windowHeight) {
-            block.style.left = '0';
-        }
-    });
-});</script>
+
 <script src="../static/js/refresh_color.js"></script>
 <script src="../static/js/refresh_word.js"></script>
 <script src="../static/js/checker.js"></script>
